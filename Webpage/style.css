@@ -1,0 +1,544 @@
+
+ html, body 
+{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#mapid 
+{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+}
+	  
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.cols label {
+  display: block;
+  color: #818181;	
+  font-size: 15px;
+  transition: 0.3s;
+  text-align: center;
+}
+.cols input {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 190px;
+}
+
+.chart_pack
+{
+	float: left;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+
+.alert 
+{
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	top: 0;
+	background-color: #111;
+	height: 50px;
+  transition: 0.5s;
+  opacity: 0.85;
+  display: block;
+}
+
+.alert h2
+{
+	color: #818181;	
+  font-size: 15px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.alert .closebtn2 {
+  position: absolute;
+color: #818181;
+text-decoration: none;
+  font-size: 36px;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+  
+	top: 0;
+	left: 10px;
+  
+  
+}
+.alert .closebtn2:hover {
+  color: #f1f1f1;
+}
+
+
+
+.alert2 
+{
+	position: absolute;
+	z-index: 10000;
+	width: 100%;
+	bottom: 0;
+	background-color: #111;
+	height: 50px;
+  transition: 0.5s;
+  opacity: 0.85;
+  display: block;
+}
+
+.alert2 h2
+{
+	color: #818181;	
+  font-size: 15px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.alert2 .closebtn2 {
+  position: absolute;
+color: #818181;
+text-decoration: none;
+  font-size: 36px;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+  
+	top: 0;
+	left: 10px;
+  
+}
+.alert2 .closebtn2:hover {
+  color: #f1f1f1;
+}
+
+.alert2 a
+{
+		color: #716f6f;	
+  font-size: 15px;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+.alert2 a:hover {
+  color: #f1f1f1;
+}
+
+.spanstyle
+{
+	z-index: 1000;
+	font-size:30px;
+	cursor:pointer ; 
+	position: absolute;
+	top: 5px;
+	left: 15px;
+	display: block;
+}
+
+.sidenav_all 
+{
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav_all .closebtn {
+   position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav_all a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  transition: 0.3s;
+}
+.sidenav_all a:hover {
+   color: #f1f1f1;
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav h2 {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidenav input {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .sidenav h2 {font-size: 13px;}
+  .sidenav input {font-size: 5px;}
+  .sidenav p {font-size: 18px;}
+  
+  .sidenav_all {padding-top: 15px;}
+  .sidenav_all h2 {font-size: 13px;}
+  .sidenav_all p {font-size: 12px;}
+  
+  .sidenav_next {padding-top: 12px;}
+  .sidenav_next a {font-size: 12px;}
+  .sidenav_next h2 {font-size: 13px;}
+  .sidenav_next p {font-size: 12px;}
+  .sidenav_next table {font-size: 45%;}
+}
+@media screen and (max-width: 1000px) 
+{
+	.sidenav_next table {font-size: 45%;}
+}
+
+.logging
+{
+	 display: none;
+}
+ .open_log
+ {
+	 display: block;
+ }
+
+
+
+.sidenav_next {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 250px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav_next th,tr,td
+{
+	 border: 1px solid white;
+	 color: #dbdbdb;
+	 text-align: center;
+}
+
+.sidenav_next table
+{
+	padding: 5%;
+}
+
+
+
+
+.sidenav_next p
+{
+	color: #dbdbdb;	
+  font-size: 15px;
+  transition: 0.3s;
+  text-align: center;
+  padding: 5%;
+}
+
+.sidenav_next a
+{
+	color: #716f6f;	
+  font-size: 15px;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+.sidenav_next a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav_next h2 {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+
+/*
+		sensor_descr
+*/
+
+
+
+
+.sensor_descr
+{
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  
+  opacity: 0.85;
+}
+
+
+.sensor_descr h2 
+{
+ 
+  padding-left: 25%;
+  padding-right: 25%;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sensor_descr p 
+{
+ 
+  padding-left: 25%;
+  padding-right: 25%;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+  
+}
+
+
+.sensor_descr .name
+{
+	padding-top: 5%;
+	text-align: center;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+
+.sensor_descr .gau_charts
+{
+	padding-top: 5%;
+	padding-left: 10%;
+	margin-left: auto; 
+	margin-right: auto; 
+	height: 360px;
+}
+
+.sensor_descr .gau_chart_pack
+{
+		margin-left: auto; 
+	margin-right: auto; 
+	float:left;
+}
+
+.sensor_descr .gau_chart
+{
+	margin-left: auto; 
+	margin-right: auto; 
+	float:left;
+}
+
+.sensor_descr .gau_chart_temp
+{
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+    text-align: center;
+}
+
+.sensor_descr .gau_chart_pro
+{
+	text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.sensor_descr .gau_chart_title
+{
+		text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  float:left;
+  width: 100%;
+  text-align: center;
+}
+
+.sensor_descr .cols
+{
+	padding-top: 5%;
+	 float:left;
+	 	padding-left: 10%;
+		margin-left: auto; 
+	margin-right: auto; 
+}
+
+.sensor_descr .col
+{
+	padding-top: 2%;
+	width: 100%;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+
+.sensor_descr .col_form
+{
+	padding: 5%;
+	margin-left: auto; 
+	margin-right: auto;
+	width: 50%;
+}
+
+
+.sensor_descr a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sensor_descr a:hover {
+  color: #f1f1f1;
+}
+
+.sensor_descr .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .sensor_descr {padding-top: 10px;}
+  .sensor_descr h2 {font-size: 12px;}
+  .gau_chart_temp	{font-size: 10px;}
+  .gau_chart_title	{font-size: 10px;}
+  .gau_chart_pro	{font-size: 10px;}
+}
+
+.spanstyle2
+{
+	z-index: 10000;
+	font-size:30px;
+	cursor:pointer ; 
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+
+
+
+
+
+
+
+.leaflet-verticalcenter {
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+    top: 50%; /* possible because the placeholder's parent is the map */
+    transform: translateY(-50%); /* using the CSS3 Transform technique */
+    padding-top: 10px;
+}
+
+.leaflet-verticalcenter .leaflet-control {
+    margin-bottom: 10px;
+}
